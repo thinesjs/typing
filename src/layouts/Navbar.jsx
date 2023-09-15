@@ -35,7 +35,7 @@ const Navbar = () => {
     <Box  p="4">
       <Flex justifyContent="space-between" alignItems="center">
         {/* Centered Logo */}
-        <Box flex="1">
+        <Box >
           <Image src={colorMode === "light" ? logoDark : logo } w="50px" h="50px" mx="auto" />
         </Box>
 
