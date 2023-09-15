@@ -1,15 +1,22 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import { CSSReset, ChakraProvider, ColorModeScript, Flex, extendTheme } from '@chakra-ui/react';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Footer from './layouts/Footer';
 import Home from './pages/Home';
 import Navbar from './layouts/Navbar';
+import theme from './theme';
 
 const Layout = () => {
   return (
     <>
-      <Navbar/>
-      <Outlet/>
-      <Footer/>
+      <Flex
+        minH="100vh"
+        flexDirection="column"
+        justifyContent="space-between"
+      >
+        <Navbar/>
+        <Outlet/>
+        <Footer/>
+      </Flex>
     </>
   );
 };
@@ -29,7 +36,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
+      <CSSReset />
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <div className="app" >
           <RouterProvider router={router} />
       </div>
