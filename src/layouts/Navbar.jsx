@@ -36,7 +36,7 @@ const Navbar = () => {
       <Flex justifyContent="space-between" alignItems="center">
         {/* Centered Logo */}
         <Box >
-          <Image src={colorMode === "light" ? logoDark : logo } w="50px" h="50px" mx="auto" />
+          <Image src={colorMode === "light" ? logoDark : logo } w="50px" h="50px" mx="auto" ml="5" />
         </Box>
 
         {/* Dark/Light Mode Switch */}

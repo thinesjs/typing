@@ -62,8 +62,6 @@ const Home = () => {
       setUserInput(input);
       
       if (currentWord === input) {
-        console.log(completedWordCount)
-        console.log(currentParagraph.split(" ").length)
         // If the user has typed the entire word correctly, proceed to the next word
         setCompletedWordCount(completedWordCount + 1);
         calculateWPM(input);
