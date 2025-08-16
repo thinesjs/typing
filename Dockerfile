@@ -12,9 +12,10 @@ ENV NODE_ENV=production
 ENV DISABLE_ESLINT_PLUGIN=true
 RUN pnpm run build
  
-FROM base AS dokploy
+FROM node:18-alpine AS dokploy
 WORKDIR /app
-ENV NODE_ENV=production
- 
-# Copy only the necessary filesdoc
-COPY --from=build /app/build ./build
+RUN npm install -g serve
+COPY --from=build /app/build ./
+
+EXPOSE 3000
+CMD ["serve", "-s", ".", "-l", "3000"]
