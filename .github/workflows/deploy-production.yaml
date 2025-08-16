@@ -32,8 +32,8 @@ jobs:
             ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
           platforms: linux/amd64
       - name: Trigger Deployment to VPS
-        uses: benbristow/dokploy-deploy-action@0.0.1
+        uses: qbix-tech/dokploy-deploy-action@v1
         with:
-          auth_token: ${{ secrets.DOKPLOY_AUTH_TOKEN }}
-          application_id: ${{ secrets.DOKPLOY_APPLICATION_ID }}
           dokploy_url: ${{ secrets.DOKPLOY_URL }}
+          api_key: ${{ secrets.DOKPLOY_API_KEY }}
+          application_id: ${{ secrets.DOKPLOY_APPLICATION_ID }}
