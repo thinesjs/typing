@@ -15,46 +15,10 @@ const Home = () => {
 
   const toast = useToast()
 
-  // prettier-ignore (kept split for readability, < 80 chars per line)
   const words = [
-    // high-frequency short words
-    'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from',
-    'has', 'he', 'in', 'is', 'it', 'its', 'of', 'on', 'or', 'the',
-    'to', 'was', 'were', 'will', 'with',
-
-    // medium length, common
-    'about', 'after', 'again', 'around', 'before', 'between', 'change',
-    'circle', 'coffee', 'coding', 'dragon', 'energy', 'escape', 'hidden',
-    'jungle', 'moment', 'notice', 'object', 'planet', 'quartz', 'rocket',
-    'silver', 'simple', 'system', 'window',
-
-    // longer or trickier spellings
-    'accommodate', 'acknowledge', 'algorithm', 'astronaut', 'awkward',
-    'borough', 'bureaucracy', 'conscience', 'dichotomy', 'exaggerate',
-    'handkerchief', 'independent', 'lightning', 'maintenance',
-    'miscellaneous', 'occasionally', 'parallel', 'questionnaire',
-    'rhythm', 'silhouette', 'supersede', 'vacuum', 'whimsical',
-
-    // contractions
-    "aren't", "can't", "couldn't", "didn't", "doesn't", "don't", "isn't",
-    "it's", "they're", "we're", "won't", "wouldn't", "you're",
-
-    // numbers and symbols
-    '24/7', '3.1415', '4th', '50%', '7-Eleven', '99', '@home', '#hashtag',
-    '$value', 'C3PO', 'R2D2',
-
-    // tech & CamelCase
-    'Android', 'CSS', 'Docker', 'GitHub', 'HTML', 'JavaScript', 'NodeJS',
-    'OpenAI', 'React', 'StackOverflow', 'TypeScript', 'Vue',
-
-    // keyboard-centric words
-    'backspace', 'capslock', 'command', 'control', 'cursor',
-    'enter', 'function', 'keyboard', 'monitor', 'mouse', 'printer',
-    'scroll', 'shortcut', 'tab', 'trackpad',
-
-    // pangram fragments / rare letters
-    'buzzing', 'cycle', 'fjord', 'gizmo', 'jazz', 'kayak', 'oxford',
-    'pixel', 'quixotic', 'sphinx', 'waltz', 'yachtsman', 'zodiac'
+    "apple", "banana", "cherry", "grape", "kiwi",
+    "lemon", "orange", "pear", "strawberry", "watermelon",
+    // from api, type.tjs-server.com/v1
   ];
   
   // generate paragraph
